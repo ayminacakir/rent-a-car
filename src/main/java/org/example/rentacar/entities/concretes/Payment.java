@@ -15,7 +15,7 @@ public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int carExpirationMonth;
+    private int cardExpirationMonth;
     private int cardExpirationYear;
     private String cardNumber;
     private String cardHolder;
