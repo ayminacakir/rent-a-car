@@ -4,6 +4,7 @@ import org.example.rentacar.business.abstracts.CarService;
 import org.example.rentacar.business.dto.requests.create.CreateCarRequest;
 import org.example.rentacar.business.dto.requests.update.UpdateCarRequest;
 import org.example.rentacar.business.dto.responses.create.CreateCarResponse;
+import org.example.rentacar.business.dto.responses.get.Car.GetAllCarsResponse;
 import org.example.rentacar.business.dto.responses.get.Car.GetCarResponse;
 import org.example.rentacar.business.dto.responses.get.Maintenance.GetAllMaintenanceResponse;
 import org.example.rentacar.business.dto.responses.update.UpdateCarResponse;
@@ -19,8 +20,12 @@ import java.util.List;
 @AllArgsConstructor
 @RequestMapping("/api/cars")
 public class CarsController {
-    @Autowired
     private final CarService service;
+
+    @GetMapping
+    public List<GetAllCarsResponse> getAll(@RequestParam(defaultValue = "false") boolean includeMaintenance) {
+        return service.getAll(includeMaintenance);
+    }
 
     @GetMapping("/{id}")
     public GetCarResponse getById(@PathVariable int id){
