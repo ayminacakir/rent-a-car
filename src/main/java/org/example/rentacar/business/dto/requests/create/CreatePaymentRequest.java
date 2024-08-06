@@ -16,4 +16,3 @@ public class CreatePaymentRequest extends PaymentRequest {
     private double balance;
 
 }
-
