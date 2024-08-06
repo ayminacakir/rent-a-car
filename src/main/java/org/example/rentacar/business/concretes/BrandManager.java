@@ -32,7 +32,6 @@ public class BrandManager implements BrandService {
     @Cacheable(value = "brand_list")
     public List<GetAllBrandsResponse>getAll(){
         List<Brand> brands = brandRepository.findAll();
-
         return brands.stream().map(brand -> mapper.map(brand, GetAllBrandsResponse.class)).toList();
     }
     @Override
@@ -80,10 +79,4 @@ public class BrandManager implements BrandService {
         Brand brand = brandRepository.findById(id).orElseThrow();
         return brand.getModels().stream().map(model -> mapper.map(model, GetAllModelsResponse.class)).toList();
     }
-
-
-
-
-
-
 }

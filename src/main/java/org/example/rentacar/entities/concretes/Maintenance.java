@@ -16,6 +16,7 @@ public class Maintenance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String information;
     private boolean isCompleted;
     private LocalDateTime startDate;

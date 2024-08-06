@@ -22,7 +22,8 @@ public class PaymentBusinessRules {
                 request.getCardExpirationMonth(),
                 request.getCardCvv()
         )) {
-            throw new BusinessException(Messages.Payment.NotAValidPayment);
+            throw new BusinessException(Messages.Payment.NotAValidPayment); //geçersiz ödeme bilgilerini belirten bir hata mesajı içerir.
+
         }
     }
 

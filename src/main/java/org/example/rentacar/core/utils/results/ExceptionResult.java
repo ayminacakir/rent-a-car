@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Setter
 @Getter
-public class ExceptionResult<T> {
+public class ExceptionResult<T> { //ExceptionResult<T> sınıfı, bir hata veya istisna durumunu temsil eden bir veri yapısıdır
     private LocalDateTime timestamp;
     private String type;
     private T message;

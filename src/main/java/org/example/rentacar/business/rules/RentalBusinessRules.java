@@ -16,7 +16,7 @@ public class RentalBusinessRules {
     private final RentalRepository repository;
 
     public void checkIfRentalExists(int id) {
-        if (!repository.existsById(id))
+        if (!repository.existsById(id)) //ID'ye sahip bir kiralama kaydı bulunamazsa, if bloğu çalışır.
             throw new BusinessException(Messages.Rental.NotExists);
     }
 
