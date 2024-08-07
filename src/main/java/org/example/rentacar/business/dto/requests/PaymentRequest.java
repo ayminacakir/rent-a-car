@@ -15,12 +15,14 @@ import org.hibernate.validator.constraints.Length;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PaymentRequest {
-    @Min(value = 2023)
-    private int CardExpirationYear;
+
 
     @Max(value = 12)
     @Min(value = 1)
     private int CardExpirationMonth;
+
+    @Min(value = 2023)
+    private int CardExpirationYear;
 
     @NotBlank(message = "Card Number is not validated.")
     @Length(min = 16, max = 16, message = "Must be 16 characters long.")
