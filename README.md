@@ -5,3 +5,7 @@ Spring Framework-Spring Boot temellerini attım,
 Spring Data JPA, ORM  kullanımı, CRUD işlemleri hakkında bilgilendim,
 Swagger kullanarak API'lerin belgelenmesi ve test edilmesini öğrendim,
 Java dilinde bildiğimi sandığım ama aslında yanlış bildiğim ya da hiç bilmediğim kısımları öğrendim,pekiştirdim.
+
+#Projede kullandıklarım:
+many to one - one to many
+controller mapping kavramları,http sembolleri
