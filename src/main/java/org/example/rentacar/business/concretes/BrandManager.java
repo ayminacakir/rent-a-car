@@ -44,15 +44,7 @@ public class BrandManager implements BrandService {
     @CacheEvict(value = "brand_list", allEntries = true)
     public CreateBrandResponse add(CreateBrandRequest request) {
         rules.checkIfBrandExistsByName(request.getName());
-//        Brand brand = new Brand();
-//        brand.setName(requests.getName());
-//        repository.save(brand);
-//
-//        CreateBrandResponse responses = new CreateBrandResponse();
-//        responses.setId(brand.getId());
-//        responses.setName(brand.getName());
-//
-//        return responses;
+
         Brand brand = mapper.map(request, Brand.class);
         brand.setId(0);
         brandRepository.save(brand);
